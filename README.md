@@ -37,5 +37,8 @@ Pickle
 ### Run program                          
 1.python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db                         
 2.python train_classifier.py DisasterResponse.db classifier.pkl                               
-3.python run.py                         
-   
+3.python run.py                          
+4.Go to http://0.0.0.0:3001/ 
+
+### Performance test       
+
