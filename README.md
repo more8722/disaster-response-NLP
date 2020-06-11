@@ -9,6 +9,8 @@ This project consists of a disaster response web-app. Include ELT pipeline, NLP 
   SQL Alchemy 
   Plotly 
   NLTK 
+# Motivation
+ USing text data from figure-8, to bulid ETL pipeline. then to train a machine learning model to classify disaster messages. Finally, by using web app that worker can input messages then get classification to serveral categories , such as "water", "food", etc.  
 # Content  
 ## Data 
    B
