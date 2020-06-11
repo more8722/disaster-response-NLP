@@ -16,7 +16,7 @@ Re
 Pickle
 # Motivation
  Using text data from figure-8, to bulid ETL pipeline. then to train a machine learning model to classify disaster messages. Finally, by using web app that worker can input messages then get classification to serveral categories , such as "water", "food", etc.  
-# Content  
+  
 ## Data 
    B
    Do ETL priplinr then store the result in a SQL database .
