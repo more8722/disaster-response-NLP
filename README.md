@@ -19,11 +19,11 @@ Pickle
   
 ## Data 
    For data part : 
-1.Messages data: disaster_messages.csv 
-2.Categories data: disaster_categories.csv 
-3.SQL Database: DisasterResponse.db 
-4.Jupyter notebook for building ETL pipeline: ETL Pipeline Preparation.ipynb 
-5.Python script for processing the data: process_data.py 
+1.Messages data: disaster_messages.csv      
+2.Categories data: disaster_categories.csv       
+3.SQL Database: DisasterResponse.db      
+4.Jupyter notebook for building ETL pipeline: ETL Pipeline Preparation.ipynb     
+5.Python script for processing the data: process_data.py         
    
    Do ETL pipeline then store the result in a SQL database .
    
