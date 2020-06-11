@@ -31,8 +31,8 @@ Pickle
 3. A pickle file that contains the trained model: classifier.pkl    
 
 ### Web app                                     
-1. run run.py for web app            
-2.enter messages you want                               
+1.Run run.py for web app            
+2.Enter messages you want                               
 
 ### Run program                          
 1.python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db                         
