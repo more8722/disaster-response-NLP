@@ -67,5 +67,5 @@ Pickle
 
 ### Performance test       
 
-![image]https://github.com/more8722/disaster-response-NLP/blob/master/message%20distribution.PNG)       
+![image](https://github.com/more8722/disaster-response-NLP/blob/master/main%20page.PNG)       
 
