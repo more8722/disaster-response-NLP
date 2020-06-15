@@ -44,7 +44,11 @@ def clean_data(df):
     
     # convert column from string to numeric
         categories[column] = pd.to_numeric(categories[column])
-    
+   
+    # replace related columns value 2 to 1 
+        categories.related.replace(2,1,inplace=True)
+   
+
     # drop the original categories column from `df`
 
     df=df.drop(columns=['categories'])
@@ -55,8 +59,7 @@ def clean_data(df):
     # drop duplicates
     df=df.drop_duplicates()
     
-    # repalce related columns value 2 to 1 
-    df=df.related.replace(2,1,inplace=True)
+
     return df
     
 
