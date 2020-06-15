@@ -92,29 +92,8 @@ def index():
                     
                 },
             }
-        },
-        {
-            'data': [
-                Bar(
-                    x=Message_counts,
-                    y=Message_names,
-                    orientation = 'h',
-                    
-                
-                )
-            ],
-           
-            'layout': {
-                'title': 'Number of Messages per Category',
-                
-                'xaxis': {
-                    'title': "Number of Messages"
-                    
-                },
-            }
         }
-        
-        
+       
     ]
 
     # encode plotly graphs in JSON
