@@ -18,8 +18,8 @@ Pickle
  Using text data from figure-8, to bulid ETL pipeline. then to train a machine learning model to classify disaster messages. Finally, by using web app that worker can input messages then get classification to serveral categories , such as "water", "food", etc.  
   
 ### ETL Pipeline       
-1.Load Messages data: disaster_messages.csv      
-2.Load Categories data: disaster_categories.csv   
+1.Load Messages data: messages.csv      
+2.Load Categories data: categories.csv   
 3.Merge and clean data
 3.Saved to SQL Database: DisasterResponse.db      
 4.Jupyter notebook for building ETL pipeline: ETL Pipeline Preparation.ipynb     
@@ -40,24 +40,24 @@ Pickle
 1.Run run.py for web app            
 2.Enter messages you want                               
 
-### Project design             
-- app
-| - template
-| |- master.html # main page of web app 
-| |- go.html  # classification result page of web app
-|- run.py  # Flask file that runs app
+### Project design                  
+- app              
+| - template                       
+| |- master.html # main page of web app                        
+| |- go.html  # classification result page of web app                     
+|- run.py  # Flask file that runs app                          
 
-- data
-|- disaster_categories.csv  # data to process 
-|- disaster_messages.csv  # data to process
-|- process_data.py
-|- InsertDatabaseName.db   # database to save clean data to
+- data                               
+|- categories.csv  # data to process                    
+|- messages.csv  # data to process                                
+|- process_data.py                                
+|- DisasterResponse.db   # database to save clean data                                    
 
-- models
-|- train_classifier.py
-|- classifier.pkl  # saved model 
-
-- README.md         
+- models                      
+|- train_classifier.py                
+|- classifier.pkl  # saved model                           
+                  
+- README.md                             
 
 ### Run program                          
 1.python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db                         
