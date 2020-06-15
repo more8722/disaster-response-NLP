@@ -64,8 +64,68 @@ def index():
                 }
             }
         }
+        {
+            'data': [
+                Bar(
+                    x=Message_counts,
+                    y=Message_names,
+                    orientation = 'h',
+                    
+                
+                )
+            ],
+           
+            'layout': {
+                'title': 'Number of Messages per Category',
+                
+                'xaxis': {
+                    'title': "Number of Messages"
+                    
+                },
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=Message_counts,
+                    y=Message_names,
+                    orientation = 'h',
+                    
+                
+                )
+            ],
+           
+            'layout': {
+                'title': 'Number of Messages per Category',
+                
+                'xaxis': {
+                    'title': "Number of Messages"
+                    
+                },
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=top5_words_names,
+                    y=top5_words
+                )
+            ],
+
+            'layout': {
+                'title': 'Top 5 frequently used words',
+                'yaxis': {
+                    'title': "Count",
+                    'automargin':True
+                },
+                'xaxis': {
+                    'title': "Words"
+                }
+            }
+        }
+        
     ]
-    
+
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
     graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
