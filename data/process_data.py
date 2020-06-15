@@ -55,6 +55,8 @@ def clean_data(df):
     # drop duplicates
     df=df.drop_duplicates()
     
+    # repalce related columns value 2 to 1 
+    df=df.related.replace(2,1,inplace=True)
     return df
     
 
