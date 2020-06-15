@@ -112,26 +112,8 @@ def index():
                     
                 },
             }
-        },
-        {
-            'data': [
-                Bar(
-                    x=top5_words_names,
-                    y=top5_words
-                )
-            ],
-
-            'layout': {
-                'title': 'Top 5 frequently used words',
-                'yaxis': {
-                    'title': "Count",
-                    'automargin':True
-                },
-                'xaxis': {
-                    'title': "Words"
-                }
-            }
         }
+        
         
     ]
 
