@@ -56,9 +56,11 @@ def tokenize(text):
     tokens = tokenizer.tokenize(text)
     #lemmatize
     lemmatizer = WordNetLemmatizer()
+    #remove stop words
+    words=[w for w in tokens if w not in stopwords.words('english')]
     #lowercase and strip
     clean_tokens = []
-    for tok in tokens:
+    for tok in words:
         clean_tok = lemmatizer.lemmatize(tok).lower().strip()
         clean_tokens.append(clean_tok)
 
@@ -101,7 +103,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     # Calculate the accuracy for each of them.
 
     for i in range(len(category_names)):
-        print("Category:", category_names[i],"\n", classification_report(Y_test.iloc[:,i].values, y_pred[:, i]))
+        print("Category:", category_names[i],"\n",                         classification_report(Y_test.iloc[:,i].values, y_pred[:, i]))
         print('Accuracy of %25s: %.2f' %(category_names[i], accuracy_score(Y_test.iloc[:,i].values, y_pred[:,i])))
 
 
