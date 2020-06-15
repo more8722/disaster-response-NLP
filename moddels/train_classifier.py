@@ -45,16 +45,18 @@ def tokenize(text):
     Ouput:
           tokens= list with processed token
     '''      
+    #remove special characters 
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    #change url to urlpalceholder(str)
     detected_urls = re.findall(url_regex, text)
     for url in detected_urls:
         text = text.replace(url, "urlplaceholder")
-        
+    #tokenize    
     tokenizer = RegexpTokenizer(r'\w+')
     tokens = tokenizer.tokenize(text)
-   
+    #lemmatize
     lemmatizer = WordNetLemmatizer()
-
+    #lowercase and strip
     clean_tokens = []
     for tok in tokens:
         clean_tok = lemmatizer.lemmatize(tok).lower().strip()
@@ -66,7 +68,7 @@ def build_model():
     '''
       Return Grid Search model with pipeline and Classifier 
     '''
- 
+    
     pipeline = Pipeline([
                     ('vect', CountVectorizer(tokenizer=tokenize)),
                     ('tfidf', TfidfTransformer()),
@@ -99,7 +101,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     # Calculate the accuracy for each of them.
 
     for i in range(len(category_names)):
-        print("Category:", category_names[i],"\n", classification_report(Y_test.iloc[:,i].values, y_pred[:, i]))
+        print("Category:", category_names[i],"\n",                         classification_report(Y_test.iloc[:,i].values, y_pred[:, i]))
         print('Accuracy of %25s: %.2f' %(category_names[i], accuracy_score(Y_test.iloc[:,i].values, y_pred[:,i])))
 
 
